@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce-fashion-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Root package.json to manage and run fullstack Frontend & Backend easily",
+  "scripts": {
+    "dev:fe": "pnpm --prefix client dev",
+    "dev:be": "pnpm --prefix server start:dev",
+    "dev": "pnpm --filter client dev & pnpm --filter server start:dev",
+    "dev:all": "pnpm dev:fe & pnpm dev:be",
+    "install:fe": "pnpm --prefix client install",
+    "install:be": "pnpm --prefix server install",
+    "install:all": "pnpm install:fe && pnpm install:be",
+    "build:fe": "pnpm --prefix client build",
+    "build:be": "pnpm --prefix server build",
+    "build:all": "pnpm build:fe && pnpm build:be",
+    "prepare": "husky"
+  },
+  "author": "PhongphanQ",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.5"
+  }
+}
